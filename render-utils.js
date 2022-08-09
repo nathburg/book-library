@@ -12,7 +12,7 @@ export function renderBookThumbnail(book) {
     return bookEl;
 }
 
-export function renderBookDetail (book) {
+export function renderBookDetail(book) {
     const bookEl = document.createElement('div');
     const bookTitleEl = document.createElement('h1');
     const bookDetailsEl = document.createElement('p');
