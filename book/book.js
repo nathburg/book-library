@@ -1,4 +1,4 @@
-import { renderBookDetail } from '../render-utils.js.';
+import { renderBookDetail } from '../render-utils.js';
 import { getBook } from '../fetch-utils.js';
 
 const bookContainerEl = document.querySelector('#book-detail-container');
