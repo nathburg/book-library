@@ -1,8 +1,18 @@
-// import functions and grab DOM elements
+import { getBooks } from "./fetch-utils.js";
+import { renderBookThumbnail } from "./render-utils.js";
 
-// let state
+const bookListContainerEl = document.querySelector('#book-list-container');
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+loadData();
+
+async function loadData() {
+    
+    const books = await getBooks();
+
+    console.log(books);
+
+    for (let book of books) {
+        const newBook = renderBookThumbnail(book);
+        bookListContainerEl.append(newBook);
+    }
+}
